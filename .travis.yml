@@ -8,7 +8,7 @@ install:
 env:
   secure: "MU+x68snHYqrm/aYHgdJcutZoTiRo1sl4MU8K09GfMp/Y4s6McNllqLheg8hM6MZAlQcOTPyp/kE8nr8cneYExl0tvH4yU6gVIZj9C7oOYJm4Qx++uNRlevbQ2Yo1lkHZnL8iNlXvqsOzxrB9ryxNClyc/M4OS6fQuyXzYcC/Fg="
 before_script:
-  - psql -c "CREATE DATABASE systersdb;" -U carol
+  - psql -c "CREATE DATABASE vmsdb;"
 script:
   - coverage run vms/manage.py test --settings=vms.settings_carol
   - flake8 vms

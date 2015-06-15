@@ -71,9 +71,9 @@ WSGI_APPLICATION = 'vms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',    #your database engine
-        'NAME' : 'vms',             #the name of your database
-        'USER' : 'carol',          #your DBMS username
-        'PASSWORD' : 'sparky01',  #your DBMS password
+        'NAME' : 'vmsdb',             #the name of your database
+        'USER' : '',          #your DBMS username
+        'PASSWORD' : '',  #your DBMS password
         'HOST' : 'localhost',
     }
 }
