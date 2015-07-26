@@ -1,6 +1,9 @@
 Systers Portal - VMS project
 ==============
 
+[![Code Issues](http://www.quantifiedcode.com/api/v1/project/7c33146f345842028664a5e8fec5e8d6/badge.svg)](http://www.quantifiedcode.com/app/project/7c33146f345842028664a5e8fec5e8d6)
+
+
 Systers has many volunteers and potential volunteers that offer their skills, time and commitment to our vision. This **Volunteer Management System** will be particularly useful for volunteer coordinators, volunteer sign-up, tracking hours, and reporting.
 
 Features
