@@ -1,6 +1,8 @@
 Systers Portal - VMS project
 ============================
 
+[![Documentation Status](https://readthedocs.org/projects/vms/badge/?version=latest)](https://readthedocs.org/projects/vms/?badge=latest)
+
 Systers has many volunteers that offer their skills, time, and commitment to
 our vision and projects. The **Volunteer Management System** (VMS) will
 be useful for volunteer coordinators, volunteer sign-up, tracking hours, and 
