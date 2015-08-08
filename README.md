@@ -1,6 +1,8 @@
 Systers Portal - VMS project
 ============================
 
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)](https://github.com/willingc/vms)
+
 [![Documentation Status](https://readthedocs.org/projects/vms/badge/?version=latest)](https://readthedocs.org/projects/vms/?badge=latest)
 
 Systers has many volunteers that offer their skills, time, and commitment to
