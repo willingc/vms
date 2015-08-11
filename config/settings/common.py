@@ -10,12 +10,30 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 from __future__ import absolute_import, unicode_literals
 
+# TODO common or other
+#from django.core.urlresolvers import reverse_lazy 
+
 import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (/a/b/myfile.py - 3 = /)
 APPS_DIR = ROOT_DIR.path('vms')
 
 env = environ.Env()
+
+# TODO # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# import os
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+# TODO # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'rs473)3n^fe0^t-^s$n)_%pl=75f_na7z5ee@(^xc-vn^bzr%a'
+#
+# # SECURITY WARNING: run with debug turned off (DEBUG = False) in production!
+# DEBUG = True
+#
+# TEMPLATE_DEBUG = True
+#
+# ALLOWED_HOSTS = []
+
 
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -45,6 +63,16 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     'vms.users',  # custom users app
     # Your stuff: custom apps go here
+    # TODO 'administrator',
+    # 'authentication',
+    # 'event',
+    # 'home',
+    # 'job',
+    # 'organization',
+    # 'registration',
+    # 'shift',
+    # 'vms',
+    # 'volunteer',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -102,6 +130,16 @@ DATABASES = {
     'default': env.db("DATABASE_URL", default="postgres:///vms"),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
+
+# TODO DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'vms',
+#         'USER': 'myuser',
+#         'PASSWORD': 'mypassword',
+#         'HOST': 'localhost',
+#     }
+# }
 
 
 # GENERAL CONFIGURATION
@@ -190,15 +228,27 @@ STATICFILES_FINDERS = (
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
 MEDIA_ROOT = str(APPS_DIR('media'))
 
+# TODO All uploaded files (such as resumes) are stored in the /srv directory
+# /srv directory contains site-specific data which is served by the system
+# MEDIA_ROOT = '/srv/'
+
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = '/media/'
+
+# TODO # Uploaded files have read and write permissions to the owner only
+# FILE_UPLOAD_PERMISSIONS = 0o600
+#
+# FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o600
+
 
 # URL Configuration
 # ------------------------------------------------------------------------------
 ROOT_URLCONF = 'config.urls'
+# TODO ROOT_URLCONF = 'vms.urls'
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = 'config.wsgi.application'
+# TODO WSGI_APPLICATION = 'vms.wsgi.application'
 
 # AUTHENTICATION CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -217,6 +267,10 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 AUTH_USER_MODEL = 'users.User'
 LOGIN_REDIRECT_URL = 'users:redirect'
 LOGIN_URL = 'account_login'
+
+# TODO # If user fails to authenticate, then they are redirected to the view
+# # specified in the reverse_lazy call
+# LOGIN_URL = reverse_lazy('auth:user_login')
 
 # SLUGLIFIER
 AUTOSLUG_SLUGIFY_FUNCTION = 'slugify.slugify'
