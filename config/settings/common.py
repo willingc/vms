@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 from __future__ import absolute_import, unicode_literals
 
 # TODO common or other
-#from django.core.urlresolvers import reverse_lazy 
+#from django.core.urlresolvers import reverse_lazy
 
 import environ
 
@@ -61,7 +61,7 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'vms.users',  # custom users app
+    #'vms.users',  # custom users app
     # Your stuff: custom apps go here
     # TODO 'administrator',
     # 'authentication',
