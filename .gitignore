@@ -13,3 +13,10 @@ __pycache__
 *.swn
 *.swo
 *.swo
+
+# Dev
+*.db
+.DS_Store
+.idea
+venv
+env
